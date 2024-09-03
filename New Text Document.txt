@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDC Login Page</title>
+    <link rel="stylesheet" href="edclogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .background {
+            background-image: url("srmdrone.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(161, 202, 255, 0.5);
+            /* Adjust color and transparency */
+        }
+
+        .login-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(196, 231, 255, 0.8);
+            padding: 30px;
+            border-radius: 35px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            width: 300px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+        }
+
+        .login-container input[type="text"]:focus,
+        .login-container input[type="password"]:focus {
+            outline: none;
+            border-color: #38B6FF;
+
+        }
+
+        .login-container .captcha {
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .login-container input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #38B6FF;
+            border: none;
+            border-radius: 20px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .login-container input[type="submit"]:hover {
+            background-color: #38B6FF;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="background">
+        <div class="overlay"></div>
+        <div class="login-container">
+            <h1><big><big>Login</big></big></h1>
+            <form action="your-login-action-url" method="POST">
+                <input type="text" name="email" placeholder="enter email" required>
+                <input type="password" name="password" placeholder="enter password" required>
+                <div class="captcha">
+                    <!-- Replace with your captcha -->
+                    <img src="captcha-image-url" alt="Captcha">
+                    <input type="text" name="captcha" placeholder="enter captcha" required>
+                </div>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+</body>
+
+
+
+</html>
